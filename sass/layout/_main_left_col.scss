@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+
+.left-col {
+  .main-img-wrapper {
+    margin-bottom: 2rem;
+
+    img {
+      border-radius: $b-rad;
+    }
+  }
+
+  .thumbs-wrapper {
+    width: 100%;
+    justify-content: space-between;
+
+    > * {
+      width: 20%;
+      border-radius: $b-rad;
+    }
+  }
+}

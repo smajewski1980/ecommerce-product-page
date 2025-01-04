@@ -1,3 +1,103 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a,
+a:hover,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
 body {
   font-family: "Kumbh Sans", serif;
+}
+
+.flex {
+  display: flex;
+}
+
+header {
+  align-items: center;
+  border-bottom: 1px solid hsl(220, 14%, 75%);
+  margin-inline: auto;
+  margin-bottom: 5rem;
+  max-width: 1440px;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+}
+header .left-wrapper {
+  gap: 3rem;
+}
+header .left-wrapper .hamburger {
+  display: none;
+}
+header .left-wrapper .logo {
+  height: 1.25rem;
+}
+header .left-wrapper ul {
+  list-style-type: none;
+  gap: 2rem;
+}
+header .left-wrapper ul li {
+  color: hsl(219, 9%, 45%);
+}
+header .right-wrapper {
+  gap: 3rem;
+  align-items: center;
+}
+header .right-wrapper .cart-wrapper {
+  display: none;
+}
+header .right-wrapper .cart-icon {
+  width: 1.25rem;
+}
+header .right-wrapper .avatar {
+  width: 48px;
+}
+
+.left-col .main-img-wrapper {
+  margin-bottom: 2rem;
+}
+.left-col .main-img-wrapper img {
+  border-radius: 15px;
+}
+.left-col .thumbs-wrapper {
+  width: 100%;
+  justify-content: space-between;
+}
+.left-col .thumbs-wrapper > * {
+  width: 20%;
+  border-radius: 15px;
+}
+
+body {
+  padding-inline: 10rem;
+}
+
+main {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+main > * {
+  padding: 3rem;
+  flex-grow: 1;
+  flex-basis: 375px;
+}
+
+.mobile-menu {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as *;
+
+header {
+  align-items: center;
+  border-bottom: 1px solid $clr-greyish-blue;
+  margin-inline: auto;
+  margin-bottom: 5rem;
+  max-width: 1440px;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+
+  .left-wrapper {
+    gap: 3rem;
+
+    .hamburger {
+      display: none;
+    }
+
+    .logo {
+      height: 1.25rem;
+    }
+
+    ul {
+      list-style-type: none;
+      gap: 2rem;
+
+      li {
+        color: $clr-dark-greyish-blue;
+      }
+    }
+  }
+
+  .right-wrapper {
+    gap: 3rem;
+    align-items: center;
+    .cart-wrapper {
+      display: none;
+    }
+
+    .cart-icon {
+      width: 1.25rem;
+    }
+
+    .avatar {
+      width: 48px;
+    }
+  }
+}
