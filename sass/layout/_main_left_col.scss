@@ -3,15 +3,20 @@
 .left-col {
   .main-img-wrapper {
     margin-bottom: 2rem;
+  }
 
-    img {
-      border-radius: $b-rad;
-    }
+  img {
+    border-radius: $b-rad;
   }
 
   .thumbs-wrapper {
     width: 100%;
     justify-content: space-between;
+
+    .thumb-img-wrapper {
+      // position: relative;
+      overflow: hidden;
+    }
 
     > * {
       width: 20%;
