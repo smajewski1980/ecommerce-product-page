@@ -18,6 +18,10 @@ a:visited {
   text-decoration: none;
 }
 
+button {
+  font: inherit;
+}
+
 body {
   font-family: "Kumbh Sans", serif;
 }
@@ -42,7 +46,6 @@ header {
   align-items: center;
   border-bottom: 1px solid hsl(220, 14%, 75%);
   margin-inline: auto;
-  margin-bottom: 5rem;
   max-width: 1440px;
   justify-content: space-between;
   padding-block: 1.5rem;
@@ -95,6 +98,54 @@ header .right-wrapper .avatar {
   border-radius: 15px;
 }
 
+.right-col {
+  display: grid;
+  gap: 1.5rem;
+  padding-right: 10rem;
+}
+.right-col h2 {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: hsl(219, 9%, 45%);
+}
+.right-col h1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+.right-col .prod-desc {
+  line-height: 1.6;
+  width: 47ch;
+  color: hsl(219, 9%, 45%);
+}
+.right-col .price-wrapper {
+  display: grid;
+  gap: 0.5rem;
+}
+.right-col .price-wrapper .price {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+.right-col .price-wrapper s {
+  color: hsl(219, 9%, 45%);
+}
+
+.add-prod-controls .qty-wrapper {
+  align-items: center;
+  justify-content: space-between;
+  width: 25%;
+  padding: 0.75rem;
+  background-color: hsl(223, 64%, 98%);
+}
+.add-prod-controls .qty-wrapper .prod-qty {
+  font-weight: 600;
+}
+.add-prod-controls .qty-wrapper img {
+  width: 0.75rem;
+}
+.add-prod-controls button {
+  flex: 1;
+}
+
 body {
   padding-inline: 10rem;
 }
@@ -102,7 +153,6 @@ body {
 main {
   max-width: 1440px;
   margin-inline: auto;
-  margin-bottom: 3rem;
   flex-wrap: wrap;
   align-items: center;
 }

@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.right-col {
+  // @include test;
+  display: grid;
+  gap: 1.5rem;
+  padding-right: 10rem;
+
+  h2 {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: $clr-dark-greyish-blue;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .prod-desc {
+    line-height: 1.6;
+    width: 47ch;
+    color: $clr-dark-greyish-blue;
+  }
+
+  .price-wrapper {
+    display: grid;
+    gap: 0.5rem;
+
+    .price {
+      font-weight: 700;
+      font-size: 1.75rem;
+    }
+
+    s {
+      color: $clr-dark-greyish-blue;
+    }
+  }
+}
+
+.add-prod-controls {
+  .qty-wrapper {
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+    padding: 0.75rem;
+    background-color: $clr-light-greyish-blue;
+
+    .prod-qty {
+      font-weight: 600;
+    }
+
+    img {
+      width: 0.75rem;
+    }
+  }
+
+  button {
+    flex: 1;
+  }
+}

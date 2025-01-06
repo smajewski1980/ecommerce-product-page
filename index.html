@@ -26,6 +26,7 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        margin-top: -1.5rem;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -98,56 +99,51 @@
         <div class="main-img-wrapper">
           <img src="images/image-product-1.jpg" alt="sneakers" />
         </div>
-        <div class="thumbs-wrapper flex">
+
+        <div class="thumbs-wrapper flex" data-thumb="one">
           <div class="thumb-img-wrapper active-thumb">
-            <img
-              class="thumb"
-              src="images/image-product-1-thumbnail.jpg"
-              alt="sneakers"
-            />
+            <img src="images/image-product-1-thumbnail.jpg" alt="sneakers" />
           </div>
-          <div class="thumb-img-wrapper">
-            <img
-              class="thumb"
-              src="images/image-product-2-thumbnail.jpg"
-              alt="sneakers"
-            />
+
+          <div class="thumb-img-wrapper" data-thumb="two">
+            <img src="images/image-product-2-thumbnail.jpg" alt="sneakers" />
           </div>
-          <div class="thumb-img-wrapper">
-            <img
-              class="thumb"
-              src="images/image-product-3-thumbnail.jpg"
-              alt="sneakers"
-            />
+
+          <div class="thumb-img-wrapper" data-thumb="three">
+            <img src="images/image-product-3-thumbnail.jpg" alt="sneakers" />
           </div>
-          <div class="thumb-img-wrapper">
-            <img
-              class="thumb"
-              src="images/image-product-4-thumbnail.jpg"
-              alt="sneakers"
-            />
+
+          <div class="thumb-img-wrapper" data-thumb="four">
+            <img src="images/image-product-4-thumbnail.jpg" alt="sneakers" />
           </div>
         </div>
       </div>
 
       <div class="right-col">
         <h2>SNEAKER COMPANY</h2>
+
         <h1>Fall Limited Edition Sneakers</h1>
+
         <p class="prod-desc">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they'll withstand everything
           the weather can offer.
         </p>
+
         <div class="price-wrapper">
           <p class="price">$125.00</p>
           <p><s>$250.00</s></p>
         </div>
-        <div class="add-prod-controls">
-          <div class="qty-wrapper">
+
+        <div class="add-prod-controls flex">
+          <div class="qty-wrapper flex">
             <img src="images/icon-minus.svg" alt="remove 1" />
+
             <p class="prod-qty">0</p>
+
             <img src="images/icon-plus.svg" alt="add 1" />
           </div>
+
           <button>
             <img src="images/icon-cart.svg" alt="" />
             Add to cart
