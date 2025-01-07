@@ -4,59 +4,96 @@
 .right-col {
   // @include test;
   display: grid;
-  gap: 1.5rem;
-  padding-right: 10rem;
+  gap: 2rem;
 
   h2 {
-    font-size: 0.75rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     color: $clr-dark-greyish-blue;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     line-height: 1;
+    margin-bottom: 1rem;
   }
 
   .prod-desc {
-    line-height: 1.6;
+    line-height: 1.7;
     width: 47ch;
     color: $clr-dark-greyish-blue;
+    font-size: 1.25rem;
   }
 
   .price-wrapper {
     display: grid;
-    gap: 0.5rem;
+    gap: 1rem;
 
     .price {
       font-weight: 700;
-      font-size: 1.75rem;
+      font-size: 2.5rem;
+      position: relative;
+      &::after {
+        content: "50%";
+        background: black;
+        border-radius: 8px;
+        font-size: 1.25rem;
+        color: $clr-white;
+        font-weight: 600;
+        left: 10rem;
+        padding: 0.35rem 0.85rem;
+        position: absolute;
+        bottom: 0.25rem;
+      }
     }
 
     s {
       color: $clr-dark-greyish-blue;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
   }
 }
 
 .add-prod-controls {
+  gap: 1.25rem;
   .qty-wrapper {
     align-items: center;
     justify-content: space-between;
-    width: 25%;
-    padding: 0.75rem;
+    flex-basis: 35%;
+    padding: 1.25rem;
     background-color: $clr-light-greyish-blue;
+    border-radius: $b-rad;
 
     .prod-qty {
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 1.25rem;
     }
 
     img {
-      width: 0.75rem;
+      width: 1rem;
     }
   }
 
   button {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-block: 1.5rem;
+    border-radius: $b-rad;
+    border: none;
+    background-color: $clr-orange;
+
+    img {
+      width: 1.5rem;
+      filter: brightness(0.5);
+    }
+
+    span {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
   }
 }

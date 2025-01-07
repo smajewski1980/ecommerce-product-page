@@ -1,8 +1,11 @@
+@use "../abstracts/mixins" as *;
+
 body {
   padding-inline: 10rem;
 }
 
 main {
+  // @include test;
   max-width: 1440px;
   margin-inline: auto;
   flex-wrap: wrap;
