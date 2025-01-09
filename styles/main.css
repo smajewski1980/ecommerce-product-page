@@ -77,6 +77,16 @@ body {
 .cart-wrapper .cart .cart-items-wrapper {
   padding-inline: 2rem;
 }
+.cart-wrapper .cart .cart-items-wrapper button {
+  width: 100%;
+  padding-block: 1.5rem;
+  border-radius: 15px;
+  border: none;
+  background-color: hsl(26, 100%, 55%);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
 
 header {
   align-items: center;
@@ -253,7 +263,7 @@ main > * {
 .mock-cart-item {
   align-items: center;
   gap: 1rem;
-  margin-block: 1.5rem;
+  margin-block: 2rem;
 }
 .mock-cart-item > img {
   width: 60px;

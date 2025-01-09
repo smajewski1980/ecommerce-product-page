@@ -35,6 +35,17 @@
 
     .cart-items-wrapper {
       padding-inline: 2rem;
+
+      button {
+        width: 100%;
+        padding-block: 1.5rem;
+        border-radius: $b-rad;
+        border: none;
+        background-color: $clr-orange;
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
     }
   }
 }
