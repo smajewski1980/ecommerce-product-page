@@ -4,6 +4,10 @@
   display: flex;
 }
 
+.go-away {
+  display: none;
+}
+
 .active-thumb {
   outline: 3px solid $clr-orange;
   position: relative;

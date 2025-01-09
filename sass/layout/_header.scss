@@ -7,7 +7,7 @@ header {
   margin-inline: auto;
   max-width: 1440px;
   justify-content: space-between;
-  padding-block: 1.54rem;
+  padding-block: 1.5rem;
 
   .left-wrapper {
     gap: 5rem;
@@ -27,6 +27,17 @@ header {
       li {
         color: $clr-dark-greyish-blue;
         font-size: 1.25rem;
+        position: relative;
+      }
+
+      .active-nav-item::after {
+        content: "";
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        bottom: -2.75rem;
+        background-color: $clr-orange;
+        left: 0;
       }
     }
   }
@@ -38,10 +49,6 @@ header {
     gap: 3rem;
     align-items: center;
     width: 375px;
-
-    // .cart-wrapper {
-    //   display: none;
-    // }
 
     .cart-icon {
       width: 2rem;
