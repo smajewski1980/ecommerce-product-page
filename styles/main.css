@@ -74,6 +74,9 @@ body {
   color: hsl(219, 9%, 45%);
   margin-top: 5.75rem;
 }
+.cart-wrapper .cart .cart-items-wrapper {
+  padding-inline: 2rem;
+}
 
 header {
   align-items: center;
@@ -245,4 +248,38 @@ main > * {
 
 .mobile-menu {
   display: none;
+}
+
+.mock-cart-item {
+  align-items: center;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+.mock-cart-item > img {
+  width: 60px;
+  border-radius: 5px;
+}
+.mock-cart-item .cart-item-content-wrapper {
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
+}
+.mock-cart-item .cart-item-content-wrapper img {
+  width: 1rem;
+}
+.mock-cart-item .cart-item-content-wrapper .cart-item-text-wrapper {
+  display: grid;
+  font-size: 1.125rem;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+.mock-cart-item .cart-item-content-wrapper .cart-item-text-wrapper p:not(.subtotal) {
+  color: hsl(219, 9%, 45%);
+}
+.mock-cart-item .cart-item-content-wrapper .cart-item-text-wrapper .price-wrapper p {
+  margin-right: 0.25rem;
+}
+.mock-cart-item .cart-item-content-wrapper .cart-item-text-wrapper .price-wrapper .subtotal {
+  font-weight: 700;
 }/*# sourceMappingURL=main.css.map */

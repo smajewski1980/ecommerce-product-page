@@ -1,0 +1,44 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.mock-cart-item {
+  // @include test;
+  align-items: center;
+  gap: 1rem;
+  margin-block: 1.5rem;
+
+  > img {
+    width: 60px;
+    border-radius: 5px;
+  }
+
+  .cart-item-content-wrapper {
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    height: 100%;
+
+    img {
+      width: 1rem;
+    }
+
+    .cart-item-text-wrapper {
+      display: grid;
+      font-size: 1.125rem;
+      font-weight: 500;
+      gap: 0.5rem;
+
+      p:not(.subtotal) {
+        color: $clr-dark-greyish-blue;
+      }
+      .price-wrapper {
+        p {
+          margin-right: 0.25rem;
+        }
+        .subtotal {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
