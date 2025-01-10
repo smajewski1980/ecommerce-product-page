@@ -49,7 +49,7 @@ body {
 .cart-wrapper {
   padding-top: 0.5rem;
   position: absolute;
-  width: 27rem;
+  width: 30rem;
   left: 0;
   top: 125%;
   background-color: hsl(0, 0%, 100%);
@@ -67,6 +67,7 @@ body {
   padding-left: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid hsl(220, 14%, 75%);
+  font-size: 1.5rem;
 }
 .cart-wrapper .cart .cart-empty-text {
   text-align: center;
@@ -85,7 +86,11 @@ body {
   background-color: hsl(26, 100%, 55%);
   font-weight: 700;
   font-size: 1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+.cart-wrapper .cart .cart-items-wrapper button:hover, .cart-wrapper .cart .cart-items-wrapper button:focus-visible {
+  background-color: #ffb27a;
 }
 
 header {
@@ -113,6 +118,10 @@ header .left-wrapper ul li {
   color: hsl(219, 9%, 45%);
   font-size: 1.25rem;
   position: relative;
+  cursor: pointer;
+}
+header .left-wrapper ul li:hover {
+  color: black;
 }
 header .left-wrapper ul .active-nav-item::after {
   content: "";
@@ -132,9 +141,18 @@ header .right-wrapper {
 header .right-wrapper .cart-icon {
   width: 2rem;
   margin-left: auto;
+  cursor: pointer;
+}
+header .right-wrapper .cart-icon:hover, header .right-wrapper .cart-icon:focus-visible {
+  filter: brightness(0.5);
 }
 header .right-wrapper .avatar {
   width: 65px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+header .right-wrapper .avatar:hover, header .right-wrapper .avatar:focus-visible {
+  outline: 3px solid hsl(26, 100%, 55%);
 }
 
 .left-col .main-img-wrapper {
@@ -153,6 +171,9 @@ header .right-wrapper .avatar {
 .left-col .thumbs-wrapper > * {
   width: 20%;
   border-radius: 15px;
+}
+.left-col .thumbs-wrapper > *:not(.active-thumb) {
+  cursor: pointer;
 }
 
 .right-col {
@@ -219,6 +240,10 @@ header .right-wrapper .avatar {
 }
 .add-prod-controls .qty-wrapper img {
   width: 1rem;
+  cursor: pointer;
+}
+.add-prod-controls .qty-wrapper img:hover, .add-prod-controls .qty-wrapper img:focus-visible {
+  filter: brightness(1.5);
 }
 .add-prod-controls button {
   flex: 1;
@@ -230,6 +255,7 @@ header .right-wrapper .avatar {
   border-radius: 15px;
   border: none;
   background-color: hsl(26, 100%, 55%);
+  cursor: pointer;
 }
 .add-prod-controls button img {
   width: 1.5rem;
@@ -238,6 +264,9 @@ header .right-wrapper .avatar {
 .add-prod-controls button span {
   font-size: 1.25rem;
   font-weight: 700;
+}
+.add-prod-controls button:hover, .add-prod-controls button:focus-visible {
+  background-color: #ffb27a;
 }
 
 body {
@@ -276,7 +305,8 @@ main > * {
   height: 100%;
 }
 .mock-cart-item .cart-item-content-wrapper img {
-  width: 1rem;
+  width: 1.25rem;
+  cursor: pointer;
 }
 .mock-cart-item .cart-item-content-wrapper .cart-item-text-wrapper {
   display: grid;
@@ -284,11 +314,15 @@ main > * {
   font-weight: 500;
   gap: 0.5rem;
 }
+.mock-cart-item .cart-item-content-wrapper .cart-item-text-wrapper p {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
 .mock-cart-item .cart-item-content-wrapper .cart-item-text-wrapper p:not(.subtotal) {
   color: hsl(219, 9%, 45%);
 }
 .mock-cart-item .cart-item-content-wrapper .cart-item-text-wrapper .price-wrapper p {
-  margin-right: 0.25rem;
+  margin-right: 0.5rem;
 }
 .mock-cart-item .cart-item-content-wrapper .cart-item-text-wrapper .price-wrapper .subtotal {
   font-weight: 700;

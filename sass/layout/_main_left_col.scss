@@ -20,6 +20,10 @@
     > * {
       width: 20%;
       border-radius: $b-rad;
+
+      &:not(.active-thumb) {
+        cursor: pointer;
+      }
     }
   }
 }

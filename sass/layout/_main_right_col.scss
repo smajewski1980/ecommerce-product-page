@@ -57,6 +57,7 @@
 
 .add-prod-controls {
   gap: 1.25rem;
+
   .qty-wrapper {
     align-items: center;
     justify-content: space-between;
@@ -72,6 +73,12 @@
 
     img {
       width: 1rem;
+      cursor: pointer;
+
+      &:hover,
+      &:focus-visible {
+        filter: brightness(1.5);
+      }
     }
   }
 
@@ -85,6 +92,7 @@
     border-radius: $b-rad;
     border: none;
     background-color: $clr-orange;
+    cursor: pointer;
 
     img {
       width: 1.5rem;
@@ -94,6 +102,11 @@
     span {
       font-size: 1.25rem;
       font-weight: 700;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $clr-hover-orange;
     }
   }
 }

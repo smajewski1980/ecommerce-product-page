@@ -4,7 +4,7 @@
   // outline: 2px solid red;
   padding-top: 0.5rem;
   position: absolute;
-  width: 27rem;
+  width: 30rem;
   left: 0;
   top: 125%;
   background-color: $clr-white;
@@ -24,6 +24,7 @@
       padding-left: 1.5rem;
       padding-bottom: 1.5rem;
       border-bottom: 1px solid $clr-greyish-blue;
+      font-size: 1.5rem;
     }
 
     .cart-empty-text {
@@ -44,7 +45,13 @@
         background-color: $clr-orange;
         font-weight: 700;
         font-size: 1.25rem;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
+        cursor: pointer;
+
+        &:hover,
+        &:focus-visible {
+          background-color: $clr-hover-orange;
+        }
       }
     }
   }

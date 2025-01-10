@@ -28,6 +28,10 @@ header {
         color: $clr-dark-greyish-blue;
         font-size: 1.25rem;
         position: relative;
+        cursor: pointer;
+        &:hover {
+          color: black;
+        }
       }
 
       .active-nav-item::after {
@@ -53,10 +57,23 @@ header {
     .cart-icon {
       width: 2rem;
       margin-left: auto;
+      cursor: pointer;
+
+      &:hover,
+      &:focus-visible {
+        filter: brightness(0.5);
+      }
     }
 
     .avatar {
       width: 65px;
+      cursor: pointer;
+      border-radius: 50%;
+
+      &:hover,
+      &:focus-visible {
+        outline: 3px solid $clr-orange;
+      }
     }
   }
 }
