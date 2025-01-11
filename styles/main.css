@@ -44,6 +44,7 @@ body {
   inset: 0;
   background-color: hsl(0, 0%, 100%);
   opacity: 0.7;
+  z-index: 99;
 }
 
 .cart-wrapper {
@@ -159,12 +160,8 @@ dialog {
   background-color: transparent;
   border: none;
   margin: auto;
-  outline: 2px solid lime;
-  width: 45rem;
+  width: 40rem;
   overflow: visible;
-}
-dialog * {
-  outline: 2px solid lime;
 }
 dialog::backdrop {
   background-color: hsla(0, 0%, 0%, 0.7);
@@ -174,31 +171,65 @@ dialog .lightbox {
 }
 dialog .lightbox .btn-lightbox-close {
   cursor: pointer;
-  filter: brightness(2);
   width: 1.5rem;
   position: absolute;
   right: 0;
-  top: -3rem;
+  top: -2.75rem;
+}
+dialog .lightbox .btn-lightbox-close:hover path, dialog .lightbox .btn-lightbox-close:focus-visible path {
+  fill: hsl(26, 100%, 55%);
 }
 dialog .lightbox .lightbox-main-img-wrapper {
-  width: 600px;
+  width: 100%;
   margin-inline: auto;
+  margin-bottom: 3rem;
   position: relative;
-}
-dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-prev,
-dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next {
-  position: absolute;
 }
 dialog .lightbox .lightbox-main-img-wrapper img {
   border-radius: 15px;
 }
-dialog .lightbox .lightbox-thumbs-wrapper {
-  width: 100%;
-  justify-content: space-around;
+dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-prev,
+dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  left: -2rem;
+  padding: 1.25rem;
+  cursor: pointer;
 }
-dialog .lightbox .lightbox-thumbs-wrapper img {
-  width: 15%;
+dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-prev:hover path, dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-prev:focus-visible path,
+dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next:hover path,
+dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next:focus-visible path {
+  stroke: hsl(26, 100%, 55%);
+}
+dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next {
+  left: unset;
+  right: -2rem;
+}
+dialog .lightbox .lightbox-thumbs-wrapper {
+  width: 85%;
+  margin-inline: auto;
+  justify-content: space-between;
+}
+dialog .lightbox .lightbox-thumbs-wrapper .lightbox-thumb-wrapper {
+  width: 110px;
   border-radius: 15px;
+  overflow: hidden;
+}
+dialog .lightbox .lightbox-thumbs-wrapper .lightbox-thumb-wrapper:not(.active-thumb) {
+  cursor: pointer;
+  position: relative;
+}
+dialog .lightbox .lightbox-thumbs-wrapper .lightbox-thumb-wrapper:not(.active-thumb):hover::after, dialog .lightbox .lightbox-thumbs-wrapper .lightbox-thumb-wrapper:not(.active-thumb):focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: hsl(0, 0%, 100%);
+  opacity: 0.7;
+  z-index: 99;
 }
 dialog:focus-visible {
   outline: none;
@@ -232,6 +263,7 @@ dialog:focus-visible {
   inset: 0;
   background-color: hsl(0, 0%, 100%);
   opacity: 0.7;
+  z-index: 99;
 }
 
 .right-col {
