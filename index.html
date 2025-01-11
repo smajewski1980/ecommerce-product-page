@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="styles/main.css" />
 
     <title>Frontend Mentor | E-commerce product page</title>
-
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/lightbox.js" defer></script>
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -36,15 +37,27 @@
   <body>
     <dialog>
       <div class="lightbox">
-        <img src="images/icon-close.svg" alt="close" />
+        <img
+          class="btn-lightbox-close"
+          src="images/icon-close.svg"
+          alt="close"
+        />
 
         <div class="lightbox-main-img-wrapper">
-          <img src="images/icon-previous.svg" alt="previous image" />
+          <img
+            class="btn-lightbox-prev"
+            src="images/icon-previous.svg"
+            alt="previous image"
+          />
           <img src="images/image-product-1.jpg" alt="product image" />
-          <img src="images/icon-previous.svg" alt="next image" />
+          <img
+            class="btn-lightbox-next"
+            src="images/icon-previous.svg"
+            alt="next image"
+          />
         </div>
 
-        <div class="lightbox-thumbs-wrapper">
+        <div class="lightbox-thumbs-wrapper flex">
           <img src="images/image-product-1-thumbnail.jpg" alt="product 1" />
           <img src="images/image-product-2-thumbnail.jpg" alt="product 2" />
           <img src="images/image-product-3-thumbnail.jpg" alt="product 3" />
@@ -81,12 +94,12 @@
       </div>
 
       <div class="right-wrapper flex">
-        <div class="cart-wrapper">
+        <div class="cart-wrapper go-away">
           <div class="cart">
             <h3>Cart</h3>
 
             <div class="cart-items-wrapper">
-              <div class="mock-cart-item flex">
+              <div class="mock-cart-item flex go-away">
                 <img src="images/image-product-1-thumbnail.jpg" alt="" />
 
                 <div class="cart-item-content-wrapper flex">
@@ -104,8 +117,8 @@
                   <img src="images/icon-delete.svg" alt="" />
                 </div>
               </div>
-              <p class="cart-empty-text go-away">Your cart is empty.</p>
-              <button>Checkout</button>
+              <p class="cart-empty-text">Your cart is empty.</p>
+              <button class="go-away">Checkout</button>
             </div>
           </div>
         </div>

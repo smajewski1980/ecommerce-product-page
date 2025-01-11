@@ -1,8 +1,10 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .left-col {
   .main-img-wrapper {
     margin-bottom: 2rem;
+    cursor: pointer;
   }
 
   img {
@@ -20,9 +22,17 @@
     > * {
       width: 20%;
       border-radius: $b-rad;
+      position: relative;
 
       &:not(.active-thumb) {
         cursor: pointer;
+
+        &:hover,
+        &:focus-visible {
+          &::after {
+            @include thumb-overlay();
+          }
+        }
       }
     }
   }

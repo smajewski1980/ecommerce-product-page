@@ -1,0 +1,58 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+dialog {
+  @include test;
+  background-color: transparent;
+  border: none;
+  margin: auto;
+  outline: 2px solid lime;
+  width: 45rem;
+  overflow: visible;
+
+  &::backdrop {
+    background-color: $clr-black-low-opac;
+  }
+
+  .lightbox {
+    background-color: transparent;
+
+    .btn-lightbox-close {
+      cursor: pointer;
+      filter: brightness(2);
+      width: 1.5rem;
+      position: absolute;
+      right: 0;
+      top: -3rem;
+    }
+
+    .lightbox-main-img-wrapper {
+      width: 600px;
+      margin-inline: auto;
+      position: relative;
+
+      .btn-lightbox-prev,
+      .btn-lightbox-next {
+        position: absolute;
+      }
+
+      img {
+        border-radius: $b-rad;
+      }
+    }
+
+    .lightbox-thumbs-wrapper {
+      width: 100%;
+      justify-content: space-around;
+
+      img {
+        width: 15%;
+        border-radius: $b-rad;
+      }
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
