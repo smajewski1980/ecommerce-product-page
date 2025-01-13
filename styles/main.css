@@ -188,6 +188,14 @@ dialog .lightbox .lightbox-main-img-wrapper {
 dialog .lightbox .lightbox-main-img-wrapper img {
   border-radius: 15px;
 }
+dialog .lightbox .lightbox-main-img-wrapper .prod-img {
+  position: absolute;
+  top: 0;
+}
+dialog .lightbox .lightbox-main-img-wrapper .active-prod-img {
+  position: relative;
+  z-index: 99;
+}
 dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-prev,
 dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next {
   position: absolute;
@@ -197,8 +205,9 @@ dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next {
   background-color: hsl(0, 0%, 100%);
   border-radius: 50%;
   left: -2rem;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
   cursor: pointer;
+  z-index: 999;
 }
 dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-prev:hover path, dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-prev:focus-visible path,
 dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next:hover path,

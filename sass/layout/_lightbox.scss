@@ -43,6 +43,16 @@ dialog {
         border-radius: $b-rad;
       }
 
+      .prod-img {
+        position: absolute;
+        top: 0;
+      }
+
+      .active-prod-img {
+        position: relative;
+        z-index: 99;
+      }
+
       .btn-lightbox-prev,
       .btn-lightbox-next {
         position: absolute;
@@ -52,8 +62,9 @@ dialog {
         background-color: $clr-white;
         border-radius: 50%;
         left: -2rem;
-        padding: 1.25rem;
+        padding: 1.25rem 1.25rem 1.25rem 1.5rem;
         cursor: pointer;
+        z-index: 999;
 
         &:hover,
         &:focus-visible {
