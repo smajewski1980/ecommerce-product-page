@@ -184,6 +184,9 @@ dialog .lightbox .lightbox-main-img-wrapper {
   margin-inline: auto;
   margin-bottom: 3rem;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 dialog .lightbox .lightbox-main-img-wrapper img {
   border-radius: 15px;

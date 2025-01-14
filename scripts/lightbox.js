@@ -1,7 +1,7 @@
 const mainImage = document.querySelector(".main-img-wrapper");
 const modal = document.querySelector("dialog");
 const modalClose = document.querySelector(".btn-lightbox-close");
-const thumbs = document.querySelectorAll(".lightbox-thumb-wrapper");
+const lightboxThumbs = document.querySelectorAll(".lightbox-thumb-wrapper");
 const prodImgs = document.querySelectorAll(".prod-img");
 const lightboxPrev = document.querySelector(".btn-lightbox-prev");
 const lightboxNext = document.querySelector(".btn-lightbox-next");
@@ -13,21 +13,22 @@ function handleLightboxPrev() {
     activeProdId--;
     removeActiveImageClass();
     addActiveImageClass();
-    removeActiveThumbClass();
-    thumbs.forEach((thumb) => {
+    removeActiveThumbClass(lightboxThumbs);
+    lightboxThumbs.forEach((thumb) => {
       if (thumb.dataset.thumb === `prod-${activeProdId}`) {
         thumb.classList.add("active-thumb");
       }
     });
   }
 }
+
 function handleLightboxNext() {
   if (activeProdId < 4) {
     activeProdId++;
     removeActiveImageClass();
     addActiveImageClass();
-    removeActiveThumbClass();
-    thumbs.forEach((thumb) => {
+    removeActiveThumbClass(lightboxThumbs);
+    lightboxThumbs.forEach((thumb) => {
       if (thumb.dataset.thumb === `prod-${activeProdId}`) {
         thumb.classList.add("active-thumb");
       }
@@ -49,8 +50,8 @@ function addActiveImageClass() {
   });
 }
 
-function removeActiveThumbClass() {
-  thumbs.forEach((thumb) => {
+function removeActiveThumbClass(thumbsArray) {
+  thumbsArray.forEach((thumb) => {
     thumb.classList.remove("active-thumb");
   });
 }
@@ -58,7 +59,7 @@ function removeActiveThumbClass() {
 function handleThumbClick(e) {
   activeProdId = e.target.dataset.thumb.slice(-1);
   const newActiveThumbElem = e.target;
-  removeActiveThumbClass();
+  removeActiveThumbClass(lightboxThumbs);
   newActiveThumbElem.classList.add("active-thumb");
   removeActiveImageClass();
   addActiveImageClass();
@@ -72,7 +73,7 @@ mainImage.addEventListener("click", () => {
   modal.showModal();
 });
 
-thumbs.forEach((thumb) => {
+lightboxThumbs.forEach((thumb) => {
   thumb.addEventListener("click", handleThumbClick);
 });
 
