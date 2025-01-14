@@ -205,7 +205,7 @@ dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next {
   background-color: hsl(0, 0%, 100%);
   border-radius: 50%;
   left: -2rem;
-  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  padding: 1.25rem 1rem 1rem 1.25rem;
   cursor: pointer;
   z-index: 999;
 }
@@ -217,6 +217,7 @@ dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next:focus-visible pat
 dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next {
   left: unset;
   right: -2rem;
+  padding: 1.15rem 0.75rem 1rem 1.35rem;
 }
 dialog .lightbox .lightbox-thumbs-wrapper {
   width: 85%;

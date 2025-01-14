@@ -14,6 +14,11 @@ function handleLightboxPrev() {
     removeActiveImageClass();
     addActiveImageClass();
     removeActiveThumbClass();
+    thumbs.forEach((thumb) => {
+      if (thumb.dataset.thumb === `prod-${activeProdId}`) {
+        thumb.classList.add("active-thumb");
+      }
+    });
   }
 }
 function handleLightboxNext() {
@@ -22,6 +27,11 @@ function handleLightboxNext() {
     removeActiveImageClass();
     addActiveImageClass();
     removeActiveThumbClass();
+    thumbs.forEach((thumb) => {
+      if (thumb.dataset.thumb === `prod-${activeProdId}`) {
+        thumb.classList.add("active-thumb");
+      }
+    });
   }
 }
 
