@@ -2,6 +2,7 @@ const mainImage = document.querySelector(".main-img-wrapper");
 const modal = document.querySelector("dialog");
 const modalClose = document.querySelector(".btn-lightbox-close");
 const lightboxThumbs = document.querySelectorAll(".lightbox-thumb-wrapper");
+const mainThumbs = document.querySelectorAll(".main-thumb-img-wrapper");
 const prodImgs = document.querySelectorAll(".prod-img");
 const lightboxPrev = document.querySelector(".btn-lightbox-prev");
 const lightboxNext = document.querySelector(".btn-lightbox-next");
@@ -59,7 +60,11 @@ function removeActiveThumbClass(thumbsArray) {
 function handleThumbClick(e) {
   activeProdId = e.target.dataset.thumb.slice(-1);
   const newActiveThumbElem = e.target;
-  removeActiveThumbClass(lightboxThumbs);
+  let thumbElems;
+  newActiveThumbElem.classList.contains("main-thumb-img-wrapper")
+    ? (thumbElems = mainThumbs)
+    : (thumbElems = lightboxThumbs);
+  removeActiveThumbClass(thumbElems);
   newActiveThumbElem.classList.add("active-thumb");
   removeActiveImageClass();
   addActiveImageClass();
@@ -74,6 +79,10 @@ mainImage.addEventListener("click", () => {
 });
 
 lightboxThumbs.forEach((thumb) => {
+  thumb.addEventListener("click", handleThumbClick);
+});
+
+mainThumbs.forEach((thumb) => {
   thumb.addEventListener("click", handleThumbClick);
 });
 

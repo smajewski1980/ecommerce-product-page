@@ -259,7 +259,7 @@ dialog:focus-visible {
   width: 100%;
   justify-content: space-between;
 }
-.left-col .thumbs-wrapper .thumb-img-wrapper {
+.left-col .thumbs-wrapper .main-thumb-img-wrapper {
   overflow: hidden;
 }
 .left-col .thumbs-wrapper > * {
