@@ -1,9 +1,12 @@
-const mainImage = document.querySelector(".main-img-wrapper");
+const mainImages = document.querySelectorAll(".main-img-wrapper .prod-img");
 const modal = document.querySelector("dialog");
 const modalClose = document.querySelector(".btn-lightbox-close");
 const lightboxThumbs = document.querySelectorAll(".lightbox-thumb-wrapper");
 const mainThumbs = document.querySelectorAll(".main-thumb-img-wrapper");
-const prodImgs = document.querySelectorAll(".prod-img");
+const lightboxprodImgs = document.querySelectorAll(
+  ".lightbox-main-img-wrapper .prod-img"
+);
+const mainProdImgs = document.querySelectorAll(".main-img-wrapper .prod-img");
 const lightboxPrev = document.querySelector(".btn-lightbox-prev");
 const lightboxNext = document.querySelector(".btn-lightbox-next");
 
@@ -12,8 +15,8 @@ let activeProdId = "1";
 function handleLightboxPrev() {
   if (activeProdId > 1) {
     activeProdId--;
-    removeActiveImageClass();
-    addActiveImageClass();
+    removeActiveImageClass(lightboxprodImgs);
+    addActiveImageClass(lightboxprodImgs);
     removeActiveThumbClass(lightboxThumbs);
     lightboxThumbs.forEach((thumb) => {
       if (thumb.dataset.thumb === `prod-${activeProdId}`) {
@@ -26,8 +29,8 @@ function handleLightboxPrev() {
 function handleLightboxNext() {
   if (activeProdId < 4) {
     activeProdId++;
-    removeActiveImageClass();
-    addActiveImageClass();
+    removeActiveImageClass(lightboxprodImgs);
+    addActiveImageClass(lightboxprodImgs);
     removeActiveThumbClass(lightboxThumbs);
     lightboxThumbs.forEach((thumb) => {
       if (thumb.dataset.thumb === `prod-${activeProdId}`) {
@@ -37,14 +40,14 @@ function handleLightboxNext() {
   }
 }
 
-function removeActiveImageClass() {
-  prodImgs.forEach((img) => {
+function removeActiveImageClass(elemArr) {
+  elemArr.forEach((img) => {
     img.classList.remove("active-prod-img");
   });
 }
 
-function addActiveImageClass() {
-  prodImgs.forEach((img) => {
+function addActiveImageClass(elemArr) {
+  elemArr.forEach((img) => {
     if (img.dataset.prod === `prod-${activeProdId}`) {
       img.classList.add("active-prod-img");
     }
@@ -66,16 +69,35 @@ function handleThumbClick(e) {
     : (thumbElems = lightboxThumbs);
   removeActiveThumbClass(thumbElems);
   newActiveThumbElem.classList.add("active-thumb");
-  removeActiveImageClass();
-  addActiveImageClass();
+
+  if (thumbElems === mainThumbs) {
+    removeActiveImageClass(mainProdImgs);
+    addActiveImageClass(mainProdImgs);
+  } else {
+    removeActiveImageClass(lightboxprodImgs);
+    addActiveImageClass(lightboxprodImgs);
+  }
+}
+
+function handleMainImageClick(e) {
+  removeActiveImageClass(lightboxprodImgs);
+  addActiveImageClass(lightboxprodImgs);
+  removeActiveThumbClass(lightboxThumbs);
+  const activeImg = e.target.dataset.prod;
+  lightboxThumbs.forEach((thumb) => {
+    if (thumb.dataset.thumb === activeImg) {
+      thumb.classList.add("active-thumb");
+    }
+  });
+  modal.showModal();
 }
 
 modalClose.addEventListener("click", () => {
   modal.close();
 });
 
-mainImage.addEventListener("click", () => {
-  modal.showModal();
+mainImages.forEach((img) => {
+  img.addEventListener("click", handleMainImageClick);
 });
 
 lightboxThumbs.forEach((thumb) => {

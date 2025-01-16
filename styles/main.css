@@ -251,8 +251,17 @@ dialog:focus-visible {
 .left-col .main-img-wrapper {
   margin-bottom: 2rem;
   cursor: pointer;
+  position: relative;
 }
-.left-col img {
+.left-col .main-img-wrapper .prod-img {
+  position: absolute;
+  top: 0;
+}
+.left-col .main-img-wrapper .active-prod-img {
+  position: relative;
+  z-index: 99;
+}
+.left-col .main-img-wrapper img {
   border-radius: 15px;
 }
 .left-col .thumbs-wrapper {

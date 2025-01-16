@@ -5,10 +5,21 @@
   .main-img-wrapper {
     margin-bottom: 2rem;
     cursor: pointer;
-  }
+    position: relative;
 
-  img {
-    border-radius: $b-rad;
+    .prod-img {
+      position: absolute;
+      top: 0;
+    }
+
+    .active-prod-img {
+      position: relative;
+      z-index: 99;
+    }
+
+    img {
+      border-radius: $b-rad;
+    }
   }
 
   .thumbs-wrapper {
