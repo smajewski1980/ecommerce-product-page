@@ -345,8 +345,11 @@ dialog:focus-visible {
   padding: 1.25rem;
   background-color: hsl(223, 64%, 98%);
   border-radius: 15px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.add-prod-controls .qty-wrapper .prod-qty {
+.add-prod-controls .qty-wrapper .item-qty {
   font-weight: 700;
   font-size: 1.25rem;
 }

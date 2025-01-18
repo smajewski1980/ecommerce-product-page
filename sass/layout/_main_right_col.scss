@@ -65,8 +65,9 @@
     padding: 1.25rem;
     background-color: $clr-light-greyish-blue;
     border-radius: $b-rad;
+    user-select: none;
 
-    .prod-qty {
+    .item-qty {
       font-weight: 700;
       font-size: 1.25rem;
     }
