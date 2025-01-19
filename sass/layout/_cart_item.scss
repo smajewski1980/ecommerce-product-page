@@ -2,7 +2,7 @@
 @use "../abstracts/variables" as *;
 
 // don't forget to put the little item number on the cart icon
-.mock-cart-item {
+.cart-item {
   // @include test;
   align-items: center;
   gap: 1rem;
