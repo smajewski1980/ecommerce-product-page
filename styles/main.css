@@ -64,6 +64,9 @@ body {
   box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.25);
   z-index: -1;
 }
+.cart-wrapper .cart {
+  padding-inline: 2rem;
+}
 .cart-wrapper .cart h3 {
   padding-left: 1.5rem;
   padding-bottom: 1.5rem;
@@ -76,10 +79,7 @@ body {
   color: hsl(219, 9%, 45%);
   margin-top: 5.5rem;
 }
-.cart-wrapper .cart .cart-items-wrapper {
-  padding-inline: 2rem;
-}
-.cart-wrapper .cart .cart-items-wrapper button {
+.cart-wrapper .cart button {
   width: 100%;
   padding-block: 1.5rem;
   border-radius: 15px;
@@ -90,7 +90,7 @@ body {
   margin-bottom: 2.5rem;
   cursor: pointer;
 }
-.cart-wrapper .cart .cart-items-wrapper button:hover, .cart-wrapper .cart .cart-items-wrapper button:focus-visible {
+.cart-wrapper .cart button:hover, .cart-wrapper .cart button:focus-visible {
   background-color: #ffb27a;
 }
 

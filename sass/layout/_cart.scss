@@ -20,6 +20,8 @@
   }
 
   .cart {
+    padding-inline: 2rem;
+
     h3 {
       padding-left: 1.5rem;
       padding-bottom: 1.5rem;
@@ -34,24 +36,20 @@
       margin-top: 5.5rem;
     }
 
-    .cart-items-wrapper {
-      padding-inline: 2rem;
+    button {
+      width: 100%;
+      padding-block: 1.5rem;
+      border-radius: $b-rad;
+      border: none;
+      background-color: $clr-orange;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      cursor: pointer;
 
-      button {
-        width: 100%;
-        padding-block: 1.5rem;
-        border-radius: $b-rad;
-        border: none;
-        background-color: $clr-orange;
-        font-weight: 700;
-        font-size: 1.25rem;
-        margin-bottom: 2.5rem;
-        cursor: pointer;
-
-        &:hover,
-        &:focus-visible {
-          background-color: $clr-hover-orange;
-        }
+      &:hover,
+      &:focus-visible {
+        background-color: $clr-hover-orange;
       }
     }
   }
