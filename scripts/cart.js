@@ -11,6 +11,7 @@ const btnCheckout = document.querySelector(".btn-checkout");
 let itemQty = 0;
 
 const sneakersObject = {
+  productId: 1,
   name: "Fall Limited Edition Sneakers",
   price: 125,
   image: "images/image-product-1-thumbnail.jpg",
@@ -20,6 +21,7 @@ const orderItems = [];
 
 class CartItem {
   constructor(cartItem) {
+    this.productId = cartItem.productId;
     this.name = cartItem.name;
     this.price = cartItem.price.toFixed(2);
     this.qty = itemQty;
@@ -28,39 +30,15 @@ class CartItem {
   calculateSubtotal() {
     return this.price * this.qty;
   }
-  generateCartItemHTML({ name, price, image }) {
-    const className = name.split(" ").join("-");
 
-    return `
-      <div class="cart-item flex">
-        <img src=${image} alt="" />
-        <div class="cart-item-content-wrapper flex">
-          <div class="cart-item-text-wrapper">
-            <p class="cart-item-name">${name}</p>
-
-            <div class="price-wrapper flex">
-              <p class="unit-price">$${price}</p>
-              <p class="qty">x ${this.qty}</p>
-              <p class="subtotal">$${this.calculateSubtotal()}</p>
-            </div>
-          </div>
-          <img class="btn-remove-${className}-from-cart" onClick=${handleCartItemRemove} src="images/icon-delete.svg" alt="" />
-        </div>
-      </div>
-    `;
-  }
-  addCartItemHTML() {
-    const HTML = this.generateCartItemHTML(this);
-    cartItemsWrapper.innerHTML += HTML;
-  }
   addItemToOrder() {
     orderItems.push(this);
   }
-  removeItemFromCart() {
-    if (orderItems.length === 1) {
-      console.log("its getting here");
-    }
-  }
+  // removeItemFromCart() {
+  //   if (orderItems.length === 1) {
+  //     console.log("its getting here");
+  //   }
+  // }
 }
 
 function handleAddToCart() {
@@ -68,10 +46,22 @@ function handleAddToCart() {
   cartBtnCheckoutToggle();
   const newCartItem = new CartItem(sneakersObject);
   const cartSubtotal = newCartItem.calculateSubtotal();
-  newCartItem.addCartItemHTML();
   handleCartToggleOpen();
   newCartItem.addItemToOrder();
+  updateCartUI();
   // make trash icon remove item from cart
+}
+
+function updateCartUI() {
+  if (!orderItems.length) {
+    cartItemsWrapper.innerHTML = `<p class="cart-empty-text">Your cart is empty.</p>`;
+    cartEmptyTextToggle();
+    cartBtnCheckoutToggle();
+  } else {
+    orderItems.forEach((item) => {
+      cartItemsWrapper.innerHTML += generateCartItemHTML(item);
+    });
+  }
 }
 
 function handleCartItemRemove() {
@@ -108,6 +98,44 @@ function handleQtyChange(incOrDec) {
     showItemQty();
   }
 }
+
+function generateCartItemHTML(itemObj) {
+  return `
+      <div class="cart-item flex">
+        <img src=${itemObj.image} alt="" />
+        <div class="cart-item-content-wrapper flex">
+          <div class="cart-item-text-wrapper">
+            <p class="cart-item-name">${itemObj.name}</p>
+
+            <div class="price-wrapper flex">
+              <p class="unit-price">$${itemObj.price}</p>
+              <p class="qty">x ${itemObj.qty}</p>
+              <p class="subtotal">$${itemObj.calculateSubtotal()}</p>
+            </div>
+          </div>
+          <img class="btn-remove-from-cart" data-prod=${
+            itemObj.productId
+          } src="images/icon-delete.svg" alt="" />
+        </div>
+      </div>
+    `;
+}
+
+function removeItemFromCart(id) {
+  orderItems.forEach((item, idx) => {
+    if (item.productId === parseInt(id)) {
+      orderItems.splice(idx, 1);
+    }
+  });
+  updateCartUI();
+}
+
+document.addEventListener("click", (e) => {
+  if (e.target.matches(".btn-remove-from-cart")) {
+    const prodIdToRemove = e.target.dataset.prod;
+    removeItemFromCart(prodIdToRemove);
+  }
+});
 
 cartIcon.addEventListener("click", handleCartToggleOpen);
 
