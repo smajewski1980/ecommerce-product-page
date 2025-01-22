@@ -112,7 +112,7 @@ function generateCartItemHTML(itemObj) {
             <div class="price-wrapper flex">
               <p class="unit-price">$${itemObj.price}</p>
               <p class="qty">x ${itemObj.qty}</p>
-              <p class="subtotal">$${itemObj.calculateSubtotal()}</p>
+              <p class="subtotal">$${itemObj.calculateSubtotal().toFixed(2)}</p>
             </div>
           </div>
           <img class="btn-remove-from-cart" data-prod=${
