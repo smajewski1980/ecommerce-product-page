@@ -42,14 +42,17 @@ class CartItem {
 }
 
 function handleAddToCart() {
-  cartEmptyTextToggle();
-  cartBtnCheckoutToggle();
-  const newCartItem = new CartItem(sneakersObject);
-  const cartSubtotal = newCartItem.calculateSubtotal();
-  handleCartToggleOpen();
-  newCartItem.addItemToOrder();
-  updateCartUI();
-  // make trash icon remove item from cart
+  if (itemQty === 0) {
+    return;
+  } else {
+    cartEmptyTextToggle();
+    cartBtnCheckoutToggle();
+    const newCartItem = new CartItem(sneakersObject);
+    const cartSubtotal = newCartItem.calculateSubtotal();
+    handleCartToggleOpen();
+    newCartItem.addItemToOrder();
+    updateCartUI();
+  }
 }
 
 function updateCartUI() {

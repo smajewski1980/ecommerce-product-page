@@ -91,7 +91,7 @@ body {
   cursor: pointer;
 }
 .cart-wrapper .cart button:hover, .cart-wrapper .cart button:focus-visible {
-  background-color: #ffb27a;
+  background-color: #ff9447;
 }
 
 header {
@@ -374,14 +374,14 @@ dialog:focus-visible {
 }
 .add-prod-controls button img {
   width: 1.5rem;
-  filter: brightness(0.5);
+  filter: brightness(0);
 }
 .add-prod-controls button span {
   font-size: 1.25rem;
   font-weight: 700;
 }
 .add-prod-controls button:hover, .add-prod-controls button:focus-visible {
-  background-color: #ffb27a;
+  background-color: #ff9447;
 }
 
 body {
