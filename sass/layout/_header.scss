@@ -46,17 +46,35 @@ header {
     }
   }
 
+  // @include test;
   .right-wrapper {
-    // @include test;
     // outline: 2px solid red;
     position: relative;
     gap: 3rem;
     align-items: center;
     width: 375px;
 
+    .cart-icon-wrapper {
+      margin-left: auto;
+      position: relative;
+
+      .cart-icon-item-qty {
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        background-color: $clr-orange;
+        color: white;
+        border-radius: 50%;
+        display: none;
+        place-content: center;
+        line-height: 1.5rem;
+      }
+    }
+
     .cart-icon {
       width: 2rem;
-      margin-left: auto;
       cursor: pointer;
 
       &:hover,

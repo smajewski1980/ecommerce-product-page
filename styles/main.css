@@ -139,9 +139,25 @@ header .right-wrapper {
   align-items: center;
   width: 375px;
 }
+header .right-wrapper .cart-icon-wrapper {
+  margin-left: auto;
+  position: relative;
+}
+header .right-wrapper .cart-icon-wrapper .cart-icon-item-qty {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  border-radius: 50%;
+  display: none;
+  place-content: center;
+  line-height: 1.5rem;
+}
 header .right-wrapper .cart-icon {
   width: 2rem;
-  margin-left: auto;
   cursor: pointer;
 }
 header .right-wrapper .cart-icon:hover, header .right-wrapper .cart-icon:focus-visible {
