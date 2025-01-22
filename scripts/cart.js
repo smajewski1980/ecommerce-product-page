@@ -34,11 +34,6 @@ class CartItem {
   addItemToOrder() {
     orderItems.push(this);
   }
-  // removeItemFromCart() {
-  //   if (orderItems.length === 1) {
-  //     console.log("its getting here");
-  //   }
-  // }
 }
 
 function handleAddToCart() {
@@ -49,26 +44,30 @@ function handleAddToCart() {
     cartBtnCheckoutToggle();
     const newCartItem = new CartItem(sneakersObject);
     const cartSubtotal = newCartItem.calculateSubtotal();
-    handleCartToggleOpen();
     newCartItem.addItemToOrder();
     updateCartUI();
+    if (cartWrapper.classList.contains("go-away")) {
+      handleCartToggleOpen();
+    }
   }
 }
 
+// need to address cart opening /closing  after second go at it
+
 function updateCartUI() {
-  if (!orderItems.length) {
+  if (orderItems.length !== 0) {
+    if (btnCheckout.classList.contains("go-away")) {
+      cartBtnCheckoutToggle();
+    }
+    orderItems.forEach((item) => {
+      cartItemsWrapper.innerHTML = "";
+      cartItemsWrapper.innerHTML += generateCartItemHTML(item);
+    });
+  } else {
     cartItemsWrapper.innerHTML = `<p class="cart-empty-text">Your cart is empty.</p>`;
     cartEmptyTextToggle();
     cartBtnCheckoutToggle();
-  } else {
-    orderItems.forEach((item) => {
-      cartItemsWrapper.innerHTML += generateCartItemHTML(item);
-    });
   }
-}
-
-function handleCartItemRemove() {
-  this.removeItemFromCart();
 }
 
 function showItemQty() {
@@ -128,13 +127,25 @@ function removeItemFromCart(id) {
   orderItems.forEach((item, idx) => {
     if (item.productId === parseInt(id)) {
       orderItems.splice(idx, 1);
+      handleCartToggleOpen();
+      updateCartUI();
+      showItemQty();
     }
   });
-  updateCartUI();
 }
 
 document.addEventListener("click", (e) => {
   if (e.target.matches(".btn-remove-from-cart")) {
+    const priceWrapper = e.target.parentElement.querySelector(".price-wrapper");
+    const subtotalText = parseInt(
+      priceWrapper.querySelector(".subtotal").textContent.slice(1)
+    );
+    const unitPriceText = parseInt(
+      priceWrapper.querySelector(".unit-price").textContent.slice(1)
+    );
+    const cartItemQty = subtotalText / unitPriceText;
+
+    itemQty -= cartItemQty;
     const prodIdToRemove = e.target.dataset.prod;
     removeItemFromCart(prodIdToRemove);
   }
