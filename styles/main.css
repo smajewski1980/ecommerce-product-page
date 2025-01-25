@@ -464,6 +464,22 @@ main > * {
   background-color: hsla(0, 0%, 0%, 0.7);
   z-index: 999;
   display: none;
+  padding: 1.5rem;
+}
+.mobile-menu .mobile-menu-close {
+  cursor: pointer;
+  margin-bottom: 3rem;
+  width: 1.25rem;
+}
+.mobile-menu ul {
+  list-style-type: none;
+}
+.mobile-menu ul li {
+  color: hsl(220, 13%, 13%);
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
 }
 .mobile-menu::before {
   content: "";
