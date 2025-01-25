@@ -1,10 +1,12 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
+@use "../abstracts/media_queries" as *;
 
 .right-col {
   // @include test;
   display: grid;
   gap: 2rem;
+  // width: 100%;
 
   h2 {
     font-size: 1rem;
@@ -13,7 +15,7 @@
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: clamp(3rem, 2.5vw, 3.5rem);
     line-height: 1;
     margin-bottom: 1rem;
   }

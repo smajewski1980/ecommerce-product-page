@@ -1,8 +1,5 @@
 @use "../abstracts/mixins" as *;
-
-body {
-  padding-inline: 10rem;
-}
+@use "../abstracts/media_queries" as *;
 
 main {
   // @include test;
@@ -15,5 +12,9 @@ main {
     padding: 5rem;
     flex-grow: 1;
     flex-basis: 500px;
+
+    @include media-lt-400 {
+      padding: 0;
+    }
   }
 }

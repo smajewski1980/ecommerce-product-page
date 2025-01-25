@@ -1,3 +1,18 @@
+@use "../abstracts/variables" as *;
+
 .mobile-menu {
+  outline: 2px solid lime;
+  position: absolute;
+  inset: 0;
+  background-color: $clr-black-low-opac;
+  z-index: 999;
   display: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 30% 0 0;
+    z-index: -999;
+    background-color: $clr-white;
+  }
 }
