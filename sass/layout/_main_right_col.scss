@@ -8,6 +8,11 @@
   gap: 2rem;
   // width: 100%;
 
+  @include media-lt-400 {
+    gap: 1rem;
+    padding-inline: 1.25rem;
+  }
+
   h2 {
     font-size: 1rem;
     letter-spacing: 1px;
@@ -15,9 +20,12 @@
   }
 
   h1 {
-    font-size: clamp(3rem, 2.5vw, 3.5rem);
+    font-size: clamp(2rem, 2.5vw, 3.5rem);
     line-height: 1;
     margin-bottom: 1rem;
+    @include media-lt-400 {
+      margin-bottom: 0;
+    }
   }
 
   .prod-desc {
@@ -25,16 +33,33 @@
     width: 47ch;
     color: $clr-dark-greyish-blue;
     font-size: 1.25rem;
+
+    @include media-lt-400 {
+      width: 100%;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
   }
 
   .price-wrapper {
     display: grid;
     gap: 1rem;
 
+    @include media-lt-400 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .price {
       font-weight: 700;
       font-size: 2.5rem;
       position: relative;
+
+      @include media-lt-400 {
+        font-size: 2rem;
+      }
+
       &::after {
         content: "50%";
         background: black;
@@ -46,6 +71,11 @@
         padding: 0.35rem 0.85rem;
         position: absolute;
         bottom: 0.25rem;
+
+        @include media-lt-400 {
+          font-size: 1rem;
+          left: 8rem;
+        }
       }
     }
 
@@ -60,6 +90,10 @@
 .add-prod-controls {
   gap: 1.25rem;
 
+  @include media-lt-400 {
+    display: block;
+  }
+
   .qty-wrapper {
     align-items: center;
     justify-content: space-between;
@@ -68,6 +102,10 @@
     background-color: $clr-light-greyish-blue;
     border-radius: $b-rad;
     user-select: none;
+
+    @include media-lt-400 {
+      margin-block: 0.75rem 1.25rem;
+    }
 
     .item-qty {
       font-weight: 700;
@@ -96,6 +134,10 @@
     border: none;
     background-color: $clr-orange;
     cursor: pointer;
+
+    @include media-lt-400 {
+      width: 100%;
+    }
 
     img {
       width: 1.5rem;

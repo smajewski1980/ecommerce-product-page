@@ -18,3 +18,9 @@ main {
     }
   }
 }
+
+.attribution {
+  @include media-lt-400 {
+    margin-block: 1rem;
+  }
+}
