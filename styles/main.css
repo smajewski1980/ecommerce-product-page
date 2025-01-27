@@ -54,7 +54,6 @@ body {
   left: 0;
   top: 125%;
   background-color: hsl(0, 0%, 100%);
-  min-height: 275px;
 }
 @media (width < 400px) {
   .cart-wrapper {
@@ -70,15 +69,16 @@ body {
   border-radius: 15px;
   position: absolute;
   inset: 25px 0 0 0;
+  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.25);
   z-index: -1;
 }
-.cart-wrapper .cart {
-  padding-inline: 2rem;
-}
 @media (width < 400px) {
-  .cart-wrapper .cart {
-    padding-inline: 0;
+  .cart-wrapper::before {
+    inset: 0;
   }
+}
+.cart-wrapper .cart .cart-items-wrapper {
+  padding-inline: 1rem;
 }
 .cart-wrapper .cart h3 {
   padding-left: 1.5rem;
@@ -90,24 +90,32 @@ body {
   .cart-wrapper .cart h3 {
     margin-top: 0.5rem;
     font-size: 1rem;
+    padding-left: 1rem;
   }
 }
 .cart-wrapper .cart .cart-empty-text {
   text-align: center;
   font-weight: 700;
   color: hsl(219, 9%, 45%);
-  margin-top: 5.5rem;
+  margin-block: 6rem;
 }
 .cart-wrapper .cart button {
-  width: 100%;
+  width: calc(100% - 2rem);
+  margin-inline: 1rem;
   padding-block: 1.5rem;
   border-radius: 15px;
   border: none;
   background-color: hsl(26, 100%, 55%);
   font-weight: 700;
   font-size: 1.25rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   cursor: pointer;
+}
+@media (width < 400px) {
+  .cart-wrapper .cart button {
+    padding-block: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
 }
 .cart-wrapper .cart button:hover, .cart-wrapper .cart button:focus-visible {
   background-color: #ff9447;
@@ -627,6 +635,11 @@ main > * {
   gap: 1rem;
   margin-block: 2rem;
 }
+@media (width < 400px) {
+  .cart-item {
+    margin-block: 1.5rem;
+  }
+}
 .cart-item > img {
   width: 60px;
   border-radius: 5px;
@@ -641,6 +654,11 @@ main > * {
   width: 1.25rem;
   cursor: pointer;
 }
+@media (width < 400px) {
+  .cart-item .cart-item-content-wrapper img {
+    width: 1rem;
+  }
+}
 .cart-item .cart-item-content-wrapper .cart-item-text-wrapper {
   display: grid;
   font-size: 1.125rem;
@@ -650,6 +668,11 @@ main > * {
 .cart-item .cart-item-content-wrapper .cart-item-text-wrapper p {
   font-size: 1.25rem;
   font-weight: 600;
+}
+@media (width < 400px) {
+  .cart-item .cart-item-content-wrapper .cart-item-text-wrapper p {
+    font-size: 1rem;
+  }
 }
 .cart-item .cart-item-content-wrapper .cart-item-text-wrapper p:not(.subtotal) {
   color: hsl(219, 9%, 45%);
