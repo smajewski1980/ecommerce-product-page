@@ -81,6 +81,7 @@ header {
     @include media-lt-400 {
       gap: 1.25rem;
       width: 100px;
+      position: static;
     }
 
     .cart-icon-wrapper {
