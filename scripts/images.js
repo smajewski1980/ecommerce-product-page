@@ -80,16 +80,18 @@ function handleThumbClick(e) {
 }
 
 function handleMainImageClick(e) {
-  removeActiveImageClass(lightboxprodImgs);
-  addActiveImageClass(lightboxprodImgs);
-  removeActiveThumbClass(lightboxThumbs);
-  const activeImg = e.target.dataset.prod;
-  lightboxThumbs.forEach((thumb) => {
-    if (thumb.dataset.thumb === activeImg) {
-      thumb.classList.add("active-thumb");
-    }
-  });
-  modal.showModal();
+  if (window.innerWidth > 400) {
+    removeActiveImageClass(lightboxprodImgs);
+    addActiveImageClass(lightboxprodImgs);
+    removeActiveThumbClass(lightboxThumbs);
+    const activeImg = e.target.dataset.prod;
+    lightboxThumbs.forEach((thumb) => {
+      if (thumb.dataset.thumb === activeImg) {
+        thumb.classList.add("active-thumb");
+      }
+    });
+    modal.showModal();
+  }
 }
 
 modalClose.addEventListener("click", () => {

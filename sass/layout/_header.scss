@@ -79,7 +79,7 @@ header {
     width: 375px;
 
     @include media-lt-400 {
-      gap: 1rem;
+      gap: 1.25rem;
       width: 100px;
     }
 
@@ -111,7 +111,7 @@ header {
         filter: brightness(0.5);
       }
       @include media-lt-400 {
-        width: 1.5rem;
+        width: 1.75rem;
       }
     }
 
@@ -126,7 +126,7 @@ header {
       }
 
       @include media-lt-400 {
-        width: 1.5rem;
+        width: 2rem;
       }
     }
   }

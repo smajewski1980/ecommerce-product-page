@@ -8,6 +8,47 @@
     cursor: pointer;
     position: relative;
 
+    .svg-wrapper {
+      display: none;
+
+      &.svg-prev::before,
+      &.svg-next::before {
+        content: "";
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        background-color: $clr-white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1rem;
+        z-index: 998;
+      }
+
+      &.svg-next::before {
+        left: unset;
+        right: 1rem;
+      }
+
+      .mob-prev-icon,
+      .mob-next-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+        left: 1.65rem;
+      }
+
+      .mob-next-icon {
+        left: unset;
+        right: 1rem;
+      }
+
+      @include media-lt-400 {
+        display: block;
+      }
+    }
+
     .prod-img {
       position: absolute;
       top: 0;
@@ -27,6 +68,10 @@
         object-fit: cover;
         border-radius: 0;
       }
+    }
+
+    @include media-lt-400 {
+      cursor: initial;
     }
   }
 
