@@ -9,6 +9,7 @@
     position: relative;
 
     .svg-wrapper {
+      cursor: pointer;
       display: none;
 
       &.svg-prev::before,

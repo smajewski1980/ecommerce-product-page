@@ -9,6 +9,8 @@ const lightboxprodImgs = document.querySelectorAll(
 const mainProdImgs = document.querySelectorAll(".main-img-wrapper .prod-img");
 const lightboxPrev = document.querySelector(".btn-lightbox-prev");
 const lightboxNext = document.querySelector(".btn-lightbox-next");
+const mobilePrev = document.querySelector(".mob-prev-icon");
+const mobileNext = document.querySelector(".mob-next-icon");
 
 let activeProdId = "1";
 
@@ -94,6 +96,22 @@ function handleMainImageClick(e) {
   }
 }
 
+function handleMobileImgPrev() {
+  if (activeProdId > 1) {
+    activeProdId--;
+    removeActiveImageClass(mainImages);
+    addActiveImageClass(mainImages);
+  } else return;
+}
+
+function handleMobileImgNext() {
+  if (activeProdId < 4) {
+    activeProdId++;
+    removeActiveImageClass(mainImages);
+    addActiveImageClass(mainImages);
+  } else return;
+}
+
 modalClose.addEventListener("click", () => {
   modal.close();
 });
@@ -112,3 +130,6 @@ mainThumbs.forEach((thumb) => {
 
 lightboxPrev.addEventListener("click", handleLightboxPrev);
 lightboxNext.addEventListener("click", handleLightboxNext);
+
+mobilePrev.addEventListener("click", handleMobileImgPrev);
+mobileNext.addEventListener("click", handleMobileImgNext);

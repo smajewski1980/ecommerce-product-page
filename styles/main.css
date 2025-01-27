@@ -310,6 +310,7 @@ dialog:focus-visible {
   position: relative;
 }
 .left-col .main-img-wrapper .svg-wrapper {
+  cursor: pointer;
   display: none;
 }
 .left-col .main-img-wrapper .svg-wrapper.svg-prev::before, .left-col .main-img-wrapper .svg-wrapper.svg-next::before {
@@ -574,7 +575,7 @@ main > * {
   position: absolute;
   inset: 0;
   background-color: hsla(0, 0%, 0%, 0.7);
-  z-index: 999;
+  z-index: 9999;
   display: none;
   padding: 1.5rem;
 }
