@@ -57,7 +57,7 @@ body {
 }
 @media (width < 400px) {
   .cart-wrapper {
-    z-index: 9999;
+    z-index: 9998;
     width: 95vw;
     top: 5.5rem;
     left: 2.5vw;
