@@ -11,7 +11,7 @@ header {
   justify-content: space-between;
   padding-block: 1.5rem;
 
-  @include media-lt-400 {
+  @include media-lt-1400 {
     padding-inline: 1.5rem;
   }
 
@@ -19,7 +19,7 @@ header {
     // @include test;
     gap: 5rem;
 
-    @include media-lt-400 {
+    @include media-lt-800 {
       gap: 1rem;
       align-items: center;
     }
@@ -28,7 +28,7 @@ header {
       display: none;
       cursor: pointer;
 
-      @include media-lt-400 {
+      @include media-lt-1000 {
         display: block;
         width: 1.25rem;
         margin-top: 0.25rem;
@@ -65,7 +65,7 @@ header {
         left: 0;
       }
 
-      @include media-lt-400 {
+      @include media-lt-1000 {
         display: none;
       }
     }
@@ -78,7 +78,7 @@ header {
     align-items: center;
     width: 375px;
 
-    @include media-lt-400 {
+    @include media-lt-800 {
       gap: 1.25rem;
       width: 100px;
       position: static;
@@ -111,7 +111,7 @@ header {
       &:focus-visible {
         filter: brightness(0.5);
       }
-      @include media-lt-400 {
+      @include media-lt-800 {
         width: 1.75rem;
       }
     }
@@ -126,7 +126,7 @@ header {
         outline: 3px solid $clr-orange;
       }
 
-      @include media-lt-400 {
+      @include media-lt-800 {
         width: 2rem;
       }
     }

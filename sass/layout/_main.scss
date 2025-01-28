@@ -13,14 +13,14 @@ main {
     flex-grow: 1;
     flex-basis: 500px;
 
-    @include media-lt-400 {
+    @include media-lt-800 {
       padding: 0;
     }
   }
 }
 
 .attribution {
-  @include media-lt-400 {
+  @include media-lt-800 {
     margin-block: 1rem;
   }
 }

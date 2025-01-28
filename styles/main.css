@@ -55,7 +55,7 @@ body {
   top: 125%;
   background-color: hsl(0, 0%, 100%);
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .cart-wrapper {
     z-index: 9998;
     width: 95vw;
@@ -72,7 +72,7 @@ body {
   box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.25);
   z-index: -1;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .cart-wrapper::before {
     inset: 0;
   }
@@ -86,7 +86,7 @@ body {
   border-bottom: 1px solid hsl(220, 14%, 75%);
   font-size: 1.5rem;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .cart-wrapper .cart h3 {
     margin-top: 0.5rem;
     font-size: 1rem;
@@ -111,7 +111,7 @@ body {
   margin-bottom: 2rem;
   cursor: pointer;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .cart-wrapper .cart button {
     padding-block: 1.25rem;
     margin-bottom: 1.5rem;
@@ -129,7 +129,7 @@ header {
   justify-content: space-between;
   padding-block: 1.5rem;
 }
-@media (width < 400px) {
+@media (width < 1400px) {
   header {
     padding-inline: 1.5rem;
   }
@@ -137,7 +137,7 @@ header {
 header .left-wrapper {
   gap: 5rem;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   header .left-wrapper {
     gap: 1rem;
     align-items: center;
@@ -147,7 +147,7 @@ header .left-wrapper .hamburger {
   display: none;
   cursor: pointer;
 }
-@media (width < 400px) {
+@media (width < 1000px) {
   header .left-wrapper .hamburger {
     display: block;
     width: 1.25rem;
@@ -179,7 +179,7 @@ header .left-wrapper nav .active-nav-item::after {
   background-color: hsl(26, 100%, 55%);
   left: 0;
 }
-@media (width < 400px) {
+@media (width < 1000px) {
   header .left-wrapper nav {
     display: none;
   }
@@ -190,7 +190,7 @@ header .right-wrapper {
   align-items: center;
   width: 375px;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   header .right-wrapper {
     gap: 1.25rem;
     width: 100px;
@@ -221,7 +221,7 @@ header .right-wrapper .cart-icon {
 header .right-wrapper .cart-icon:hover, header .right-wrapper .cart-icon:focus-visible {
   filter: brightness(0.5);
 }
-@media (width < 400px) {
+@media (width < 800px) {
   header .right-wrapper .cart-icon {
     width: 1.75rem;
   }
@@ -234,7 +234,7 @@ header .right-wrapper .avatar {
 header .right-wrapper .avatar:hover, header .right-wrapper .avatar:focus-visible {
   outline: 3px solid hsl(26, 100%, 55%);
 }
-@media (width < 400px) {
+@media (width < 800px) {
   header .right-wrapper .avatar {
     width: 2rem;
   }
@@ -369,7 +369,7 @@ dialog:focus-visible {
   left: unset;
   right: 1rem;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .left-col .main-img-wrapper .svg-wrapper {
     display: block;
   }
@@ -385,7 +385,7 @@ dialog:focus-visible {
 .left-col .main-img-wrapper img {
   border-radius: 15px;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .left-col .main-img-wrapper img {
     width: 100%;
     height: 325px;
@@ -394,7 +394,7 @@ dialog:focus-visible {
     border-radius: 0;
   }
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .left-col .main-img-wrapper {
     cursor: initial;
   }
@@ -422,7 +422,7 @@ dialog:focus-visible {
   opacity: 0.7;
   z-index: 99;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .left-col .thumbs-wrapper {
     display: none;
   }
@@ -432,7 +432,7 @@ dialog:focus-visible {
   display: grid;
   gap: 2rem;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .right-col {
     gap: 1rem;
     padding-inline: 1.25rem;
@@ -448,7 +448,7 @@ dialog:focus-visible {
   line-height: 1;
   margin-bottom: 1rem;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .right-col h1 {
     margin-bottom: 0;
   }
@@ -459,7 +459,7 @@ dialog:focus-visible {
   color: hsl(219, 9%, 45%);
   font-size: 1.25rem;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .right-col .prod-desc {
     width: 100%;
     line-height: 1.5;
@@ -470,7 +470,7 @@ dialog:focus-visible {
   display: grid;
   gap: 1rem;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .right-col .price-wrapper {
     display: flex;
     justify-content: space-between;
@@ -482,7 +482,7 @@ dialog:focus-visible {
   font-size: 2.5rem;
   position: relative;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .right-col .price-wrapper .price {
     font-size: 2rem;
   }
@@ -499,7 +499,7 @@ dialog:focus-visible {
   position: absolute;
   bottom: 0.25rem;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .right-col .price-wrapper .price::after {
     font-size: 1rem;
     left: 8rem;
@@ -514,7 +514,7 @@ dialog:focus-visible {
 .add-prod-controls {
   gap: 1.25rem;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .add-prod-controls {
     display: block;
   }
@@ -530,7 +530,7 @@ dialog:focus-visible {
      -moz-user-select: none;
           user-select: none;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .add-prod-controls .qty-wrapper {
     margin-block: 0.75rem 1.25rem;
   }
@@ -558,7 +558,7 @@ dialog:focus-visible {
   background-color: hsl(26, 100%, 55%);
   cursor: pointer;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .add-prod-controls button {
     width: 100%;
   }
@@ -586,13 +586,13 @@ main > * {
   flex-grow: 1;
   flex-basis: 500px;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   main > * {
     padding: 0;
   }
 }
 
-@media (width < 400px) {
+@media (width < 800px) {
   .attribution {
     margin-block: 1rem;
   }
@@ -635,7 +635,7 @@ main > * {
   gap: 1rem;
   margin-block: 2rem;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .cart-item {
     margin-block: 1.5rem;
   }
@@ -654,7 +654,7 @@ main > * {
   width: 1.25rem;
   cursor: pointer;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .cart-item .cart-item-content-wrapper img {
     width: 1rem;
   }
@@ -669,7 +669,7 @@ main > * {
   font-size: 1.25rem;
   font-weight: 600;
 }
-@media (width < 400px) {
+@media (width < 800px) {
   .cart-item .cart-item-content-wrapper .cart-item-text-wrapper p {
     font-size: 1rem;
   }
