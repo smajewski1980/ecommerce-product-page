@@ -54,8 +54,6 @@ function handleAddToCart() {
   }
 }
 
-// need to address cart opening /closing  after second go at it
-
 function updateCartUI() {
   if (orderItems.length !== 0) {
     if (btnCheckout.classList.contains("go-away")) {

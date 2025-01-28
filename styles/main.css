@@ -48,28 +48,28 @@ body {
 }
 
 .cart-wrapper {
+  background-color: hsl(0, 0%, 100%);
+  left: 0;
   padding-top: 0.5rem;
   position: absolute;
-  width: 30rem;
-  left: 0;
   top: 125%;
-  background-color: hsl(0, 0%, 100%);
+  width: 30rem;
 }
 @media (width < 800px) {
   .cart-wrapper {
-    z-index: 9998;
-    width: 95vw;
-    top: 5.5rem;
-    left: 2.5vw;
     border-radius: 15px;
+    left: 2.5vw;
+    top: 5.5rem;
+    width: 95vw;
+    z-index: 9998;
   }
 }
 .cart-wrapper::before {
-  content: "";
   border-radius: 15px;
-  position: absolute;
-  inset: 25px 0 0 0;
   box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.25);
+  content: "";
+  inset: 25px 0 0 0;
+  position: absolute;
   z-index: -1;
 }
 @media (width < 800px) {
@@ -81,40 +81,40 @@ body {
   padding-inline: 1rem;
 }
 .cart-wrapper .cart h3 {
-  padding-left: 1.5rem;
-  padding-bottom: 1.5rem;
   border-bottom: 1px solid hsl(220, 14%, 75%);
   font-size: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
 }
 @media (width < 800px) {
   .cart-wrapper .cart h3 {
-    margin-top: 0.5rem;
     font-size: 1rem;
+    margin-top: 0.5rem;
     padding-left: 1rem;
   }
 }
 .cart-wrapper .cart .cart-empty-text {
-  text-align: center;
-  font-weight: 700;
   color: hsl(219, 9%, 45%);
+  font-weight: 700;
   margin-block: 6rem;
+  text-align: center;
 }
 .cart-wrapper .cart button {
-  width: calc(100% - 2rem);
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
   margin-inline: 1rem;
   padding-block: 1.5rem;
-  border-radius: 15px;
-  border: none;
-  background-color: hsl(26, 100%, 55%);
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  cursor: pointer;
+  width: calc(100% - 2rem);
 }
 @media (width < 800px) {
   .cart-wrapper .cart button {
-    padding-block: 1.25rem;
     margin-bottom: 1.5rem;
+    padding-block: 1.25rem;
   }
 }
 .cart-wrapper .cart button:hover, .cart-wrapper .cart button:focus-visible {
@@ -124,9 +124,9 @@ body {
 header {
   align-items: center;
   border-bottom: 1px solid hsl(220, 14%, 75%);
+  justify-content: space-between;
   margin-inline: auto;
   max-width: 1440px;
-  justify-content: space-between;
   padding-block: 1.5rem;
 }
 @media (width < 1400px) {
@@ -139,45 +139,45 @@ header .left-wrapper {
 }
 @media (width < 800px) {
   header .left-wrapper {
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
   }
 }
 header .left-wrapper .hamburger {
-  display: none;
   cursor: pointer;
+  display: none;
 }
 @media (width < 1000px) {
   header .left-wrapper .hamburger {
     display: block;
-    width: 1.25rem;
     margin-top: 0.25rem;
+    width: 1.25rem;
   }
 }
 header .left-wrapper .logo {
   height: 1.5rem;
 }
 header .left-wrapper nav ul {
-  list-style-type: none;
   gap: 2.5rem;
+  list-style-type: none;
 }
 header .left-wrapper nav ul li {
   color: hsl(219, 9%, 45%);
+  cursor: pointer;
   font-size: 1.25rem;
   position: relative;
-  cursor: pointer;
 }
 header .left-wrapper nav ul li:hover {
   color: black;
 }
 header .left-wrapper nav .active-nav-item::after {
-  content: "";
-  width: 100%;
-  height: 5px;
-  position: absolute;
-  bottom: -2.75rem;
   background-color: hsl(26, 100%, 55%);
+  bottom: -2.75rem;
+  content: "";
+  height: 5px;
   left: 0;
+  position: absolute;
+  width: 100%;
 }
 @media (width < 1000px) {
   header .left-wrapper nav {
@@ -185,16 +185,16 @@ header .left-wrapper nav .active-nav-item::after {
   }
 }
 header .right-wrapper {
-  position: relative;
-  gap: 3rem;
   align-items: center;
+  gap: 3rem;
+  position: relative;
   width: 375px;
 }
 @media (width < 800px) {
   header .right-wrapper {
     gap: 1.25rem;
-    width: 100px;
     position: static;
+    width: 100px;
   }
 }
 header .right-wrapper .cart-icon-wrapper {
@@ -202,21 +202,21 @@ header .right-wrapper .cart-icon-wrapper {
   position: relative;
 }
 header .right-wrapper .cart-icon-wrapper .cart-icon-item-qty {
-  width: 1.5rem;
-  height: 1.5rem;
-  position: absolute;
-  top: -50%;
-  right: -50%;
   background-color: hsl(26, 100%, 55%);
-  color: white;
   border-radius: 50%;
+  color: white;
   display: none;
-  place-content: center;
+  height: 1.5rem;
   line-height: 1.5rem;
+  place-content: center;
+  position: absolute;
+  right: -50%;
+  top: -50%;
+  width: 1.5rem;
 }
 header .right-wrapper .cart-icon {
-  width: 2rem;
   cursor: pointer;
+  width: 2rem;
 }
 header .right-wrapper .cart-icon:hover, header .right-wrapper .cart-icon:focus-visible {
   filter: brightness(0.5);
@@ -227,9 +227,9 @@ header .right-wrapper .cart-icon:hover, header .right-wrapper .cart-icon:focus-v
   }
 }
 header .right-wrapper .avatar {
-  width: 65px;
-  cursor: pointer;
   border-radius: 50%;
+  cursor: pointer;
+  width: 65px;
 }
 header .right-wrapper .avatar:hover, header .right-wrapper .avatar:focus-visible {
   outline: 3px solid hsl(26, 100%, 55%);
@@ -244,8 +244,8 @@ dialog {
   background-color: transparent;
   border: none;
   margin: auto;
-  width: 40rem;
   overflow: visible;
+  width: 40rem;
 }
 dialog::backdrop {
   background-color: hsla(0, 0%, 0%, 0.7);
@@ -255,22 +255,22 @@ dialog .lightbox {
 }
 dialog .lightbox .btn-lightbox-close {
   cursor: pointer;
-  width: 1.5rem;
   position: absolute;
   right: 0;
   top: -2.75rem;
+  width: 1.5rem;
 }
 dialog .lightbox .btn-lightbox-close:hover path, dialog .lightbox .btn-lightbox-close:focus-visible path {
   fill: hsl(26, 100%, 55%);
 }
 dialog .lightbox .lightbox-main-img-wrapper {
-  width: 100%;
-  margin-inline: auto;
   margin-bottom: 3rem;
+  margin-inline: auto;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  width: 100%;
 }
 dialog .lightbox .lightbox-main-img-wrapper img {
   border-radius: 15px;
@@ -285,15 +285,15 @@ dialog .lightbox .lightbox-main-img-wrapper .active-prod-img {
 }
 dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-prev,
 dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  cursor: pointer;
+  left: -2rem;
+  padding: 1.25rem 1rem 1rem 1.25rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 4rem;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 50%;
-  left: -2rem;
-  padding: 1.25rem 1rem 1rem 1.25rem;
-  cursor: pointer;
   z-index: 999;
 }
 dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-prev:hover path, dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-prev:focus-visible path,
@@ -303,18 +303,18 @@ dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next:focus-visible pat
 }
 dialog .lightbox .lightbox-main-img-wrapper .btn-lightbox-next {
   left: unset;
-  right: -2rem;
   padding: 1.15rem 0.75rem 1rem 1.35rem;
+  right: -2rem;
 }
 dialog .lightbox .lightbox-thumbs-wrapper {
-  width: 85%;
-  margin-inline: auto;
   justify-content: space-between;
+  margin-inline: auto;
+  width: 85%;
 }
 dialog .lightbox .lightbox-thumbs-wrapper .lightbox-thumb-wrapper {
-  width: 110px;
   border-radius: 15px;
   overflow: hidden;
+  width: 110px;
 }
 dialog .lightbox .lightbox-thumbs-wrapper .lightbox-thumb-wrapper:not(.active-thumb) {
   cursor: pointer;
@@ -333,8 +333,8 @@ dialog:focus-visible {
 }
 
 .left-col .main-img-wrapper {
-  margin-bottom: 2rem;
   cursor: pointer;
+  margin-bottom: 2rem;
   position: relative;
 }
 .left-col .main-img-wrapper .svg-wrapper {
@@ -342,15 +342,15 @@ dialog:focus-visible {
   display: none;
 }
 .left-col .main-img-wrapper .svg-wrapper.svg-prev::before, .left-col .main-img-wrapper .svg-wrapper.svg-next::before {
-  content: "";
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
   background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  content: "";
+  height: 2.25rem;
+  left: 1rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 1rem;
+  width: 2.25rem;
   z-index: 998;
 }
 .left-col .main-img-wrapper .svg-wrapper.svg-next::before {
@@ -359,11 +359,11 @@ dialog:focus-visible {
 }
 .left-col .main-img-wrapper .svg-wrapper .mob-prev-icon,
 .left-col .main-img-wrapper .svg-wrapper .mob-next-icon {
+  left: 1.65rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 999;
-  left: 1.65rem;
 }
 .left-col .main-img-wrapper .svg-wrapper .mob-next-icon {
   left: unset;
@@ -387,11 +387,11 @@ dialog:focus-visible {
 }
 @media (width < 800px) {
   .left-col .main-img-wrapper img {
-    width: 100%;
+    border-radius: 0;
     height: 325px;
     -o-object-fit: cover;
        object-fit: cover;
-    border-radius: 0;
+    width: 100%;
   }
 }
 @media (width < 800px) {
@@ -400,16 +400,16 @@ dialog:focus-visible {
   }
 }
 .left-col .thumbs-wrapper {
-  width: 100%;
   justify-content: space-between;
+  width: 100%;
 }
 .left-col .thumbs-wrapper .main-thumb-img-wrapper {
   overflow: hidden;
 }
 .left-col .thumbs-wrapper > * {
-  width: 20%;
   border-radius: 15px;
   position: relative;
+  width: 20%;
 }
 .left-col .thumbs-wrapper > *:not(.active-thumb) {
   cursor: pointer;
@@ -439,9 +439,9 @@ dialog:focus-visible {
   }
 }
 .right-col h2 {
+  color: hsl(219, 9%, 45%);
   font-size: 1rem;
   letter-spacing: 1px;
-  color: hsl(219, 9%, 45%);
 }
 .right-col h1 {
   font-size: clamp(2rem, 2.5vw, 3.5rem);
@@ -454,16 +454,16 @@ dialog:focus-visible {
   }
 }
 .right-col .prod-desc {
-  line-height: 1.7;
-  width: 47ch;
   color: hsl(219, 9%, 45%);
   font-size: 1.25rem;
+  line-height: 1.7;
+  width: 47ch;
 }
 @media (width < 800px) {
   .right-col .prod-desc {
-    width: 100%;
-    line-height: 1.5;
     font-size: 1rem;
+    line-height: 1.5;
+    width: 100%;
   }
 }
 .right-col .price-wrapper {
@@ -472,14 +472,14 @@ dialog:focus-visible {
 }
 @media (width < 800px) {
   .right-col .price-wrapper {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 }
 .right-col .price-wrapper .price {
-  font-weight: 700;
   font-size: 2.5rem;
+  font-weight: 700;
   position: relative;
 }
 @media (width < 800px) {
@@ -488,16 +488,16 @@ dialog:focus-visible {
   }
 }
 .right-col .price-wrapper .price::after {
-  content: "50%";
   background: black;
   border-radius: 8px;
-  font-size: 1.25rem;
+  bottom: 0.25rem;
   color: hsl(0, 0%, 100%);
+  content: "50%";
+  font-size: 1.25rem;
   font-weight: 600;
   left: 10rem;
   padding: 0.35rem 0.85rem;
   position: absolute;
-  bottom: 0.25rem;
 }
 @media (width < 800px) {
   .right-col .price-wrapper .price::after {
@@ -521,11 +521,11 @@ dialog:focus-visible {
 }
 .add-prod-controls .qty-wrapper {
   align-items: center;
-  justify-content: space-between;
-  flex-basis: 35%;
-  padding: 1.25rem;
   background-color: hsl(223, 64%, 98%);
   border-radius: 15px;
+  flex-basis: 35%;
+  justify-content: space-between;
+  padding: 1.25rem;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -536,27 +536,27 @@ dialog:focus-visible {
   }
 }
 .add-prod-controls .qty-wrapper .item-qty {
-  font-weight: 700;
   font-size: 1.25rem;
+  font-weight: 700;
 }
 .add-prod-controls .qty-wrapper img {
-  width: 1rem;
   cursor: pointer;
+  width: 1rem;
 }
 .add-prod-controls .qty-wrapper img:hover, .add-prod-controls .qty-wrapper img:focus-visible {
   filter: brightness(1.5);
 }
 .add-prod-controls button {
-  flex: 1;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding-block: 1.5rem;
-  border-radius: 15px;
-  border: none;
   background-color: hsl(26, 100%, 55%);
+  border: none;
+  border-radius: 15px;
   cursor: pointer;
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  justify-content: center;
+  padding-block: 1.5rem;
 }
 @media (width < 800px) {
   .add-prod-controls button {
@@ -564,8 +564,8 @@ dialog:focus-visible {
   }
 }
 .add-prod-controls button img {
-  width: 1.5rem;
   filter: brightness(0);
+  width: 1.5rem;
 }
 .add-prod-controls button span {
   font-size: 1.25rem;
@@ -576,15 +576,15 @@ dialog:focus-visible {
 }
 
 main {
-  max-width: 1440px;
-  margin-inline: auto;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
+  margin-inline: auto;
+  max-width: 1440px;
 }
 main > * {
-  padding: 5rem;
-  flex-grow: 1;
   flex-basis: 500px;
+  flex-grow: 1;
+  padding: 5rem;
 }
 @media (width < 800px) {
   main > * {
@@ -599,13 +599,12 @@ main > * {
 }
 
 .mobile-menu {
-  outline: 2px solid lime;
-  position: absolute;
-  inset: 0;
   background-color: hsla(0, 0%, 0%, 0.7);
-  z-index: 9999;
   display: none;
+  inset: 0;
   padding: 1.5rem;
+  position: absolute;
+  z-index: 9999;
 }
 .mobile-menu .mobile-menu-close {
   cursor: pointer;
@@ -617,17 +616,17 @@ main > * {
 }
 .mobile-menu ul li {
   color: hsl(220, 13%, 13%);
+  cursor: pointer;
   font-size: 1.25rem;
   font-weight: 600;
-  cursor: pointer;
   margin-bottom: 1.5rem;
 }
 .mobile-menu::before {
-  content: "";
-  position: absolute;
-  inset: 0 30% 0 0;
-  z-index: -999;
   background-color: hsl(0, 0%, 100%);
+  content: "";
+  inset: 0 30% 0 0;
+  position: absolute;
+  z-index: -999;
 }
 
 .cart-item {
@@ -641,18 +640,18 @@ main > * {
   }
 }
 .cart-item > img {
-  width: 60px;
   border-radius: 5px;
+  width: 60px;
 }
 .cart-item .cart-item-content-wrapper {
   align-items: center;
-  justify-content: space-between;
   flex: 1;
   height: 100%;
+  justify-content: space-between;
 }
 .cart-item .cart-item-content-wrapper img {
-  width: 1.25rem;
   cursor: pointer;
+  width: 1.25rem;
 }
 @media (width < 800px) {
   .cart-item .cart-item-content-wrapper img {

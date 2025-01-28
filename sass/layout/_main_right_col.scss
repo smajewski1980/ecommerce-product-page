@@ -3,57 +3,52 @@
 @use "../abstracts/media_queries" as *;
 
 .right-col {
-  // @include test;
   display: grid;
   gap: 2rem;
-  // width: 100%;
 
   @include media-lt-800 {
     gap: 1rem;
     padding-inline: 1.25rem;
   }
-
   h2 {
+    color: $clr-dark-greyish-blue;
     font-size: 1rem;
     letter-spacing: 1px;
-    color: $clr-dark-greyish-blue;
   }
-
   h1 {
     font-size: clamp(2rem, 2.5vw, 3.5rem);
     line-height: 1;
     margin-bottom: 1rem;
+
     @include media-lt-800 {
       margin-bottom: 0;
     }
   }
-
   .prod-desc {
-    line-height: 1.7;
-    width: 47ch;
     color: $clr-dark-greyish-blue;
     font-size: 1.25rem;
+    line-height: 1.7;
+    width: 47ch;
 
     @include media-lt-800 {
-      width: 100%;
-      line-height: 1.5;
       font-size: 1rem;
+      line-height: 1.5;
+      width: 100%;
     }
   }
-
   .price-wrapper {
     display: grid;
     gap: 1rem;
 
     @include media-lt-800 {
+      align-items: center;
       display: flex;
       justify-content: space-between;
-      align-items: center;
     }
 
     .price {
-      font-weight: 700;
       font-size: 2.5rem;
+      font-weight: 700;
       position: relative;
 
       @include media-lt-800 {
@@ -61,16 +56,16 @@
       }
 
       &::after {
-        content: "50%";
         background: black;
         border-radius: 8px;
-        font-size: 1.25rem;
+        bottom: 0.25rem;
         color: $clr-white;
+        content: "50%";
+        font-size: 1.25rem;
         font-weight: 600;
         left: 10rem;
         padding: 0.35rem 0.85rem;
         position: absolute;
-        bottom: 0.25rem;
 
         @include media-lt-800 {
           font-size: 1rem;
@@ -78,7 +73,6 @@
         }
       }
     }
-
     s {
       color: $clr-dark-greyish-blue;
       font-size: 1.5rem;
@@ -96,11 +90,11 @@
 
   .qty-wrapper {
     align-items: center;
-    justify-content: space-between;
-    flex-basis: 35%;
-    padding: 1.25rem;
     background-color: $clr-light-greyish-blue;
     border-radius: $b-rad;
+    flex-basis: 35%;
+    justify-content: space-between;
+    padding: 1.25rem;
     user-select: none;
 
     @include media-lt-800 {
@@ -108,13 +102,13 @@
     }
 
     .item-qty {
-      font-weight: 700;
       font-size: 1.25rem;
+      font-weight: 700;
     }
 
     img {
-      width: 1rem;
       cursor: pointer;
+      width: 1rem;
 
       &:hover,
       &:focus-visible {
@@ -124,31 +118,28 @@
   }
 
   button {
-    flex: 1;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding-block: 1.5rem;
-    border-radius: $b-rad;
-    border: none;
     background-color: $clr-orange;
+    border: none;
+    border-radius: $b-rad;
     cursor: pointer;
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    justify-content: center;
+    padding-block: 1.5rem;
 
     @include media-lt-800 {
       width: 100%;
     }
-
     img {
-      width: 1.5rem;
       filter: brightness(0);
+      width: 1.5rem;
     }
-
     span {
       font-size: 1.25rem;
       font-weight: 700;
     }
-
     &:hover,
     &:focus-visible {
       background-color: $clr-hover-orange;

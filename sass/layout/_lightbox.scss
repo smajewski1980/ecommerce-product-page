@@ -2,28 +2,24 @@
 @use "../abstracts/mixins" as *;
 
 dialog {
-  // @include test;
   background-color: transparent;
   border: none;
   margin: auto;
-  // outline: 2px solid lime;
-  width: 40rem;
   overflow: visible;
+  width: 40rem;
 
   &::backdrop {
     background-color: $clr-black-low-opac;
   }
-
   .lightbox {
     background-color: transparent;
 
     .btn-lightbox-close {
       cursor: pointer;
-      // filter: brightness(2);
-      width: 1.5rem;
       position: absolute;
       right: 0;
       top: -2.75rem;
+      width: 1.5rem;
 
       &:hover,
       &:focus-visible {
@@ -34,11 +30,11 @@ dialog {
     }
 
     .lightbox-main-img-wrapper {
-      width: 100%;
-      margin-inline: auto;
       margin-bottom: 3rem;
+      margin-inline: auto;
       position: relative;
       user-select: none;
+      width: 100%;
 
       img {
         border-radius: $b-rad;
@@ -56,15 +52,15 @@ dialog {
 
       .btn-lightbox-prev,
       .btn-lightbox-next {
+        background-color: $clr-white;
+        border-radius: 50%;
+        cursor: pointer;
+        left: -2rem;
+        padding: 1.25rem 1rem 1rem 1.25rem;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         width: 4rem;
-        background-color: $clr-white;
-        border-radius: 50%;
-        left: -2rem;
-        padding: 1.25rem 1rem 1rem 1.25rem;
-        cursor: pointer;
         z-index: 999;
 
         &:hover,
@@ -77,20 +73,20 @@ dialog {
 
       .btn-lightbox-next {
         left: unset;
-        right: -2rem;
         padding: 1.15rem 0.75rem 1rem 1.35rem;
+        right: -2rem;
       }
     }
 
     .lightbox-thumbs-wrapper {
-      width: 85%;
-      margin-inline: auto;
       justify-content: space-between;
+      margin-inline: auto;
+      width: 85%;
 
       .lightbox-thumb-wrapper {
-        width: 110px;
         border-radius: $b-rad;
         overflow: hidden;
+        width: 110px;
       }
 
       .lightbox-thumb-wrapper:not(.active-thumb) {

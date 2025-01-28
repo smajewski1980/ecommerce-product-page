@@ -20,11 +20,7 @@ function handleLightboxPrev() {
     removeActiveImageClass(lightboxprodImgs);
     addActiveImageClass(lightboxprodImgs);
     removeActiveThumbClass(lightboxThumbs);
-    lightboxThumbs.forEach((thumb) => {
-      if (thumb.dataset.thumb === `prod-${activeProdId}`) {
-        thumb.classList.add("active-thumb");
-      }
-    });
+    lightboxThumbs[activeProdId - 1].classList.add("active-thumb");
   }
 }
 
@@ -34,11 +30,7 @@ function handleLightboxNext() {
     removeActiveImageClass(lightboxprodImgs);
     addActiveImageClass(lightboxprodImgs);
     removeActiveThumbClass(lightboxThumbs);
-    lightboxThumbs.forEach((thumb) => {
-      if (thumb.dataset.thumb === `prod-${activeProdId}`) {
-        thumb.classList.add("active-thumb");
-      }
-    });
+    lightboxThumbs[activeProdId - 1].classList.add("active-thumb");
   }
 }
 
@@ -49,11 +41,7 @@ function removeActiveImageClass(elemArr) {
 }
 
 function addActiveImageClass(elemArr) {
-  elemArr.forEach((img) => {
-    if (img.dataset.prod === `prod-${activeProdId}`) {
-      img.classList.add("active-prod-img");
-    }
-  });
+  elemArr[activeProdId - 1].classList.add("active-prod-img");
 }
 
 function removeActiveThumbClass(thumbsArray) {
@@ -87,11 +75,7 @@ function handleMainImageClick(e) {
     addActiveImageClass(lightboxprodImgs);
     removeActiveThumbClass(lightboxThumbs);
     const activeImg = e.target.dataset.prod;
-    lightboxThumbs.forEach((thumb) => {
-      if (thumb.dataset.thumb === activeImg) {
-        thumb.classList.add("active-thumb");
-      }
-    });
+    lightboxThumbs[activeProdId - 1].classList.add("active-thumb");
     modal.showModal();
   }
 }

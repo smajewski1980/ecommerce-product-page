@@ -1,24 +1,21 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/media_queries" as *;
-
 main {
-  // @include test;
-  max-width: 1440px;
-  margin-inline: auto;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
+  margin-inline: auto;
+  max-width: 1440px;
 
   > * {
-    padding: 5rem;
-    flex-grow: 1;
     flex-basis: 500px;
+    flex-grow: 1;
+    padding: 5rem;
 
     @include media-lt-800 {
       padding: 0;
     }
   }
 }
-
 .attribution {
   @include media-lt-800 {
     margin-block: 1rem;
